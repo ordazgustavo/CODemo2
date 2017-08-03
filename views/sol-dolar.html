@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/css-reseter.css">
+  <link rel="stylesheet" href="../css/materialize.css">
+  <link rel="stylesheet" href="../css/materialize-stepper.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>CO Demo 2</title>
+</head>
+<body class="blue-grey lighten-5">
+
+  <nav>
+    <div class="nav-wrapper z-depth-4">
+      <div class="container">
+        <a href="#" class="brand-logo"><img id="logo-dashboard" src="../images/cambistaonline-logo.png" alt="logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="home.html">Inicio</a></li>
+          <li><a href="transacciones.html">Mis transacciones</a></li>
+          <li><a href="../index.html">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="card-panel">
+      <div class="container">
+        <h4 class="grey-text text-darken-3">Cambio de Soles a Dolares</h4>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s10 offset-s2">
+          <form action="transacciones.html" method="post">
+            <ul class="stepper linear">
+
+              <li class="step active">
+                <div class="step-title waves-effect">Monto a cambiar</div>
+                <div class="step-content">
+                  <div class="row">
+                    <div class="input-field col s8">
+                      <input type="text" name="monto" class="validate" required>
+                      <label for="monto">Cantidad en Soles</label>
+                    </div>
+                  </div>
+                  <div class="step-actions">
+                    <button class="teal accent-4 waves-effect waves-dark btn next-step">CONTINUAR</button>
+                  </div>
+                </div>
+              </li>
+
+              <li class="step">
+                <div class="step-title waves-effect">Datos personales</div>
+                <div class="step-content">
+                    <div class="row">
+                      <div class="col s8">
+                        <div class="input-field">
+                          <input id="dni" type="text" name="dni" class="validate" required>
+                          <label for="dni">DNI</label>
+                        </div>
+
+                        <div class="input-field">
+                          <input id="nombre" type="text" name="nombre" class="validate" required>
+                          <label for="nombre">Nombre</label>
+                        </div>
+
+                        <div class="input-field">
+                          <input id="apellido" type="text" name="apellido" class="validate" required>
+                          <label for="apellido">Apellido</label>
+                        </div>
+
+                        <div class="input-field">
+                          <input id="telefono" type="text" name="telefono" class="validate" required>
+                          <label for="telefono">Telefono</label>
+                        </div>
+
+                        <div class="input-field">
+                          <input id="numero-de-cuenta" type="text" name="numero-de-cuenta" class="validate" required>
+                          <label for="numero-de-cuenta">Número de cuenta</label>
+                        </div>
+
+                        <div class="input-field">
+                          <select name="banco">
+                            <option value="" disabled selected>Seleccionar...</option>
+                            <option value="Financiero">Financiero</option>
+                            <option value="BCP">BCP</option>
+                            <option value="Interbank">Interbank</option>
+                            <option value="Scotiabank">Scotiabank</option>
+                            <option value="BBVA">BBVA<option>
+                            <option value="Banbif">Banbif<option>
+                            <option value="Citibank">Citibank<option>
+                          </select>
+                          <label>Banco</label>
+                        </div>
+
+                        <div class="input-field">
+                          <select name="moneda">
+                            <option value="" disabled selected>Seleccionar...</option>
+                            <option value="Financiero">Dolares</option>
+                            <option value="BCP">Soles</option>
+                          </select>
+                          <label>Moneda</label>
+                        </div>
+
+                        <div class="input-field">
+                          <input id="ciudad" type="text" name="ciudad" class="validate" required>
+                          <label for="ciudad">Ciudad actual</label>
+                        </div>
+
+                        <div class="input-field">
+                          <input id="correo" type="text" name="correo" class="validate" required>
+                          <label for="correo">Correo electrónico</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step-actions">
+                      <button class="teal accent-4 waves-effect waves-dark btn next-step">CONTINUAR</button>
+                      <button class="waves-effect waves-dark btn-flat previous-step">VOLVER</button>
+                    </div>
+                </div>
+              </li>
+
+              <li class="step">
+                <div class="step-title waves-effect">Datos transferencia</div>
+                  <div class="step-content">
+                    <div class="row">
+                      <div class="col s8">
+                        <div class="card-panel teal accent-4">
+                          <span class="white-text">Para completar tu cambio online, transfiere el monto a una de las siguientes cuentas bancarias:
+                          </span>
+                        </div>
+                        <p>
+                          Banco Financiero<br>
+                          <strong>Cuenta en soles:</strong> 0853018472<br>
+                          <strong>Cuenta en dolares:</strong> 0853018480<br><br>
+
+                          Códigos Interbancarios<br>
+                          <strong>Cuenta en soles:</strong> 03502800 0853018472 03<br>
+                          <strong>Cuenta en dolares:</strong> 03502800 0853018480 06<br>
+                          </p>
+                      </div>
+                    </div>
+                    <div class="step-actions">
+                      <button class="teal accent-4 waves-effect waves-dark btn next-step">CONTINUAR</button>
+                      <button class="waves-effect waves-dark btn-flat previous-step">VOLVER</button>
+                    </div>
+                </div>
+              </li>
+
+              <li class="step">
+                <div class="step-title waves-effect">¡Fin!</div>
+                <div class="step-content">
+                  <h4>¡Completado!</h4>
+                  <p>Se le notificara cuando la transaccion haya realizado de manera exitosa.</p>
+                  <div class="step-actions">
+                    <button class="teal accent-4 waves-effect waves-dark btn" type="submit">FINALIZAR</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer blue-grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <img id="logo-dashboard" src="../images/cambistaonline-logo.png" alt="logo">
+          <p>Cambia tu dinero online. <small>Simple, seguro y fácil</small></p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Enlaces</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Google +</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 Cambista.Online
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js" charset="utf-8"></script>
+  <script src="../js/materialize.min.js" charset="utf-8"></script>
+  <script src="../js/materialize-stepper.js" charset="utf-8"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.stepper').activateStepper();
+      $('select').material_select();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #252c3a;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#login-logo, .nav-wrapper {
+  background-color: var(--primary-color);
+}
+
+#logo-dashboard {
+  width: 150px;
+  margin-top: 7px;
+}
+
+.hero .card-panel {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+.card-panel {
+  margin-top: 0;
+}
+
+.card-header {
+  padding: 10px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  margin: 0;
+}
